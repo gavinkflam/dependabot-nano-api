@@ -1,0 +1,6 @@
+.circleci
+.git
+test
+.dockerignore
+.gitignore
+Dockerfile
