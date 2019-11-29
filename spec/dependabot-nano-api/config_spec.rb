@@ -6,12 +6,12 @@ describe 'Config' do
   it 'derives config from environment variables' do
     env = {
       'GITLAB_HOST' => 'gitlab.example.com',
-      'PYPI_BASE_URL' => 'https://pypi.example.com/simple/'
+      'PIP_INDEX_URL' => 'https://pypi.example.com/simple/'
     }
     config = DependabotNanoApi::Config.from_env(env)
 
     expect(config[:gitlab_host]).to be('gitlab.example.com')
-    expect(config[:pypi_base_url]).to be('https://pypi.example.com/simple/')
+    expect(config[:pip_index_url]).to be('https://pypi.example.com/simple/')
   end
 
   it 'applies config' do
@@ -20,7 +20,7 @@ describe 'Config' do
     ).to be('https://pypi.python.org/simple/')
 
     config = {
-      pypi_base_url: 'https://pypi.example.com/simple/'
+      pip_index_url: 'https://pypi.example.com/simple/'
     }
     DependabotNanoApi::Config.apply!(config)
 
