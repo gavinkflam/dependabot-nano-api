@@ -119,7 +119,7 @@ GEM
       rest-client (>= 1.8.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    excon (0.69.1)
+    excon (0.71.0)
     falcon (0.34.4)
       async (~> 1.13)
       async-container (~> 0.14.0)
